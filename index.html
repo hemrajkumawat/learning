@@ -29,6 +29,9 @@
           <span ng-hide="post.link">
             {{post.title}}
           </span>
+        </span>
+        <span>
+          <a href="#/posts/{{$index}}">Comments</a>
         </span> 
     </div>
       <form ng-submit="addPost()"
@@ -71,6 +74,18 @@
       {{comment.body}}
     </span>
   </div>
+  <form ng-submit="addComment()"
+    style="margin-top:30px;">
+    <h3>Add a new comment</h3>
+
+    <div class="form-group">
+      <input type="text"
+      class="form-control"
+      placeholder="Comment"
+      ng-model="body"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
 </script>
 </body>
 </html>
